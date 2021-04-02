@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://k8s-user1-master.centralindia.cloudapp.azure.com/api'
+  apiUrl: 'http://k8s-user#-master.centralindia.cloudapp.azure.com/api'
 };
 
 /*
