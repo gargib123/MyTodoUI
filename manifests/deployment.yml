@@ -1,19 +1,35 @@
-apiVersion : apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mytodoui 
+  name: frontend
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: mytodoui
+      app: frontend
   template:
     metadata:
       labels:
-        app: mytodoui 
+        app: frontend
     spec:
       containers:
-        - name: mytodoui 
-          image: gargi4.azurecr.io/mytodoui
-          ports:
-          - containerPort: 80
+      - name: f1
+        image: gargi4.azurecr.io/mytodoui
+        ports:
+        - containerPort: 80
+        env:
+        - name: API_URL
+          value: "https://backend-52-172-248-205.ip.skaaslabs.com/api"
+
+
+
+
+
+
+
+
+
+
+
+
+
