@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: mytodoui 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mytodoui
+  template:
+    metadata:
+      labels:
+        app: mytodoui 
+    spec:
+      containers:
+        - name: mytodoui 
+          image: gargi4.azurecr.io/mytodoui
+          ports:
+          - containerPort: 80
